@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20 — Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <span class="etiqueta">Exercício 20</span>
+        <h1>Minha Lista de Tarefas</h1>
+        <p class="introducao">
+            Adicione tarefas, marque as concluídas e acompanhe o progresso.
+        </p>
+ 
+        <section class="conceitos">
+            <article>
+                <span>Array</span>
+                <p>Armazena o texto de cada tarefa cadastrada.</p>
+            </article>
+ 
+            <article>
+                <span>createElement</span>
+                <p>Cria os itens e botões diretamente no JavaScript.</p>
+            </article>
+ 
+            <article>
+                <span>classList</span>
+                <p>Alterna o estado visual da tarefa concluída.</p>
+            </article>
+        </section>
+ 
+        <label for="tarefa">Nova tarefa:</label>
+        <div class="entrada">
+            <input
+                type="text"
+                id="tarefa"
+                maxlength="80"
+                placeholder="Exemplo: concluir o exercício de JavaScript"
+                autocomplete="off"
+            >
+            <button id="btnAdicionar">Adicionar</button>
+        </div>
+ 
+        <p id="mensagem" class="mensagem" aria-live="polite">
+            Digite uma tarefa para começar.
+        </p>
+ 
+        <section class="resumo">
+            <article>
+                <span>Total</span>
+                <strong id="totalTarefas">0</strong>
+            </article>
+ 
+            <article>
+                <span>Concluídas</span>
+                <strong id="tarefasConcluidas">0</strong>
+            </article>
+ 
+            <article>
+                <span>Pendentes</span>
+                <strong id="tarefasPendentes">0</strong>
+            </article>
+        </section>
+ 
+        <section class="lista-container">
+            <div class="lista-cabecalho">
+                <h2>Tarefas cadastradas</h2>
+                <button id="btnLimpar" class="secundario">
+                    Limpar todas
+                </button>
+            </div>
+ 
+            <ul id="listaTarefas">
+                <li class="vazio">Nenhuma tarefa cadastrada.</li>
+            </ul>
+        </section>
+    </main>
+ 
+    <script src="scripta.js"></script>
+</body>
+</html>

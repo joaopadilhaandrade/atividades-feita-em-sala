@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17 — Percorrendo Arrays com forEach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <span class="etiqueta">Exercício 17</span>
+        <h1>Trilha de Tecnologias Front-End</h1>
+        <p class="introducao">
+            Utilize forEach para percorrer todas as posições de um array.
+        </p>
+ 
+        <section class="conceitos">
+            <article>
+                <span>Array</span>
+                <p>Guarda a sequência de tecnologias.</p>
+            </article>
+ 
+            <article>
+                <span>Callback</span>
+                <p>É a função executada para cada item.</p>
+            </article>
+ 
+            <article>
+                <span>Índice</span>
+                <p>Indica a posição atual dentro do array.</p>
+            </article>
+        </section>
+ 
+        <section class="resumo">
+            <article>
+                <span>Total no array</span>
+                <strong id="quantidade">5</strong>
+            </article>
+ 
+            <article>
+                <span>Itens processados</span>
+                <strong id="processadas">0</strong>
+            </article>
+        </section>
+ 
+        <div class="botoes">
+            <button onclick="mostrarTrilha()">Mostrar trilha</button>
+            <button class="secundario" onclick="limparTrilha()">Limpar</button>
+        </div>
+ 
+        <p id="mensagem" class="mensagem" aria-live="polite">
+            Clique em “Mostrar trilha” para executar o forEach.
+        </p>
+ 
+        <section class="trilha-container">
+            <h2>Etapas da trilha</h2>
+            <ol id="listaTecnologias">
+                <li class="vazio">A trilha ainda não foi exibida.</li>
+            </ol>
+        </section>
+    </main>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+    <link rel="stylesheet" href="style12.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Tipos de Dados em JavaScript</h1>
+        <p>Preencha os dados para descobrir o tipo de cada valor.</p>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu Nome">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" placeholder="Digite sua Idade">
+        <label class="opcao" for="estudante">
+            <input type="checkbox" id="estudante">
+            Sou Estudante do curso de Desenvolvimento de Sistemas
+        </label>
+        <div class="buton">
+            <button onclick="analisaDado()">Analisar Dados</button>
+            <button class="secun" onclick="limpaCampo()">Limpar</button>
+        </div>
+        <section id="resultado" class="resultado">
+            <h2>Resultado da Análise</h2>
+            <p id="mensagem">Preencha os campos e clique em "Analisar Dados".</p>
+            <p id="resulNome"></p>
+            <p id="resulIda"></p>
+            <p id="resulEstu"></p>
+        </section>
+    </main>
+    <script src="script12.js"></script>
+</body>
+</html>

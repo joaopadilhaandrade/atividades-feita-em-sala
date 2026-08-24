@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14 - Variáveis Locais e Globais</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main class="container">
+        <span class="etiqueta">Exercício 14</span>
+        <h1>Painel de Visitas</h1>
+        <p class="introducao">
+            Registre visitantes e observe a diferença entre variáveis globais e locais.
+        </p>
+
+        <section class="painel-escopo">
+            <article class="cartao global">
+                <span class="tipo">Variável global</span>
+                <h2 id="nomeSistema">Portal 2DS</h2>
+                <p>Total de visitas: <strong id="totalVisitas">0</strong></p>
+            </article>
+
+            <article class="cartao local">
+                <span class="tipo">Variável local</span>
+                <h2>Visitante atual</h2>
+                <p id="visitanteAtual">Aguardando uma visita.</p>
+            </article>
+        </section>
+
+        <label for="nomeVisitante">Nome do visitante:</label>
+        <input
+            type="text"
+            id="nomeVisitante"
+            placeholder="Exemplo: Ana"
+            autocomplete="off"
+        >
+
+        <div class="botoes">
+            <button onclick="registrarVisita()">Registrar visita</button>
+            <button class="resumo" onclick="mostrarResumo()">Mostrar resumo</button>
+            <button class="secundario" onclick="reiniciarPainel()">Reiniciar</button>
+        </div>
+
+        <section class="resultado" aria-live="polite">
+            <h2>Mensagem</h2>
+            <p id="mensagem">Digite um nome para registrar uma visita.</p>
+            <p id="resumo"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

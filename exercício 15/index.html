@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15 — Calculadora de Desconto</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <main class="container">
+        <span class="etiqueta">Exercício 15</span>
+        <h1>Calculadora de Desconto</h1>
+        <p class="introducao">
+            Informe o preço e o percentual para calcular o valor final.
+        </p>
+
+        <section class="explicacao-funcao">
+            <article>
+                <span>Parâmetros</span>
+                <p>Os valores entram na função para serem utilizados no cálculo.</p>
+            </article>
+
+            <article>
+                <span>Retorno</span>
+                <p>O resultado é devolvido com a palavra reservada <strong>return</strong>.</p>
+            </article>
+        </section>
+
+        <label for="preco">Preço do produto:</label>
+        <input
+            type="number"
+            id="preco"
+            min="0"
+            step="0.01"
+            placeholder="Exemplo: 150"
+        >
+
+        <label for="percentual">Percentual de desconto:</label>
+        <input
+            type="number"
+            id="percentual"
+            min="0"
+            max="100"
+            step="1"
+            placeholder="Exemplo: 10"
+        >
+
+        <div class="botoes">
+            <button onclick="mostrarCalculo()">Calcular desconto</button>
+            <button class="secundario" onclick="limpar()">Limpar</button>
+        </div>
+
+        <section class="resultado" aria-live="polite">
+            <h2>Resultado</h2>
+            <p id="mensagem">Preencha os campos para realizar o cálculo.</p>
+
+            <div class="valores">
+                <article>
+                    <span>Preço original</span>
+                    <strong id="precoOriginal">R$ 0,00</strong>
+                </article>
+
+                <article>
+                    <span>Valor do desconto</span>
+                    <strong id="valorDesconto">R$ 0,00</strong>
+                </article>
+
+                <article class="destaque">
+                    <span class="texto-branco">Preço final</span>
+                    <strong id="precoFinal" class="texto-branco">R$ 0,00</strong>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

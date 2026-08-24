@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18 — Eventos com addEventListener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <span class="etiqueta">Exercício 18</span>
+        <h1>Painel de Eventos</h1>
+        <p class="introducao">
+            Registre eventos no JavaScript sem usar onclick no HTML.
+        </p>
+ 
+        <section class="conceitos">
+            <article>
+                <span>Elemento</span>
+                <p>É selecionado pelo id no JavaScript.</p>
+            </article>
+ 
+            <article>
+                <span>Evento</span>
+                <p>Representa uma ação, como clique ou digitação.</p>
+            </article>
+ 
+            <article>
+                <span>Callback</span>
+                <p>É a função executada quando o evento acontece.</p>
+            </article>
+        </section>
+ 
+        <label for="texto">Digite uma mensagem:</label>
+        <input
+            type="text"
+            id="texto"
+            maxlength="50"
+            placeholder="Exemplo: Aprendendo eventos"
+            autocomplete="off"
+        >
+ 
+        <section class="visualizacao">
+            <span>Pré-visualização</span>
+            <p id="preVisualizacao">A mensagem aparecerá aqui.</p>
+        </section>
+ 
+        <section id="areaInteracao" class="area-interacao">
+            Passe o mouse sobre esta área.
+        </section>
+ 
+        <div class="botoes">
+            <button id="btnRegistrar">Registrar clique</button>
+            <button id="btnReiniciar" class="secundario">Reiniciar</button>
+        </div>
+ 
+        <section class="resumo" aria-live="polite">
+            <article>
+                <span>Cliques registrados</span>
+                <strong id="totalCliques">0</strong>
+            </article>
+ 
+            <article>
+                <span>Caracteres digitados</span>
+                <strong id="totalCaracteres">0</strong>
+            </article>
+ 
+            <article>
+                <span>Último evento</span>
+                <strong id="ultimoEvento">Nenhum</strong>
+            </article>
+        </section>
+    </main>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

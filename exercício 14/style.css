@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 14px 35px rgba(32, 54, 86, 0.16);
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #174e96;
+    background-color: #e8f0fe;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 14px 0 8px;
+    color: #263b80;
+    text-align: center;
+}
+
+.introducao {
+    margin: 0;
+    color: #52606d;
+    text-align: center;
+}
+
+.painel-escopo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 28px 0;
+}
+
+.cartao {
+    min-height: 165px;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+}
+
+.cartao.global {
+    background-color: #e8f4ff;
+    border-color: #64b5f6;
+}
+
+.cartao.local {
+    background-color: #f2ecff;
+    border-color: #9575cd;
+}
+
+.tipo {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cartao h2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.cartao p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border: 1px solid #aeb8c2;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #174e96;
+    outline: 3px solid rgba(23, 78, 166, 0.15);
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 22px;
+}
+
+button {
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #174e96;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #123b78;
+}
+
+button.resumo {
+    background-color: #6a43a3;
+}
+
+button.resumo:hover {
+    background-color: #50317f;
+}
+
+button.secundario {
+    background-color: #607d8b;
+}
+
+button.secundario:hover {
+    background-color: #455a64;
+}
+
+.resultado {
+    margin-top: 24px;
+    padding: 18px;
+    border-left: 5px solid #174e96;
+    border-radius: 8px;
+    background-color: #f3f7fd;
+}
+
+.resultado h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.resultado p {
+    margin: 8px 0;
+}
+
+#resumo {
+    font-weight: bold;
+}
+
+@media (max-width: 680px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 22px;
+    }
+
+    .painel-escopo {
+        grid-template-columns: 1fr;
+    }
+
+    .botoes {
+        grid-template-columns: 1fr;
+    }
+  }

@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px;
+    font-family: Arial, sans-serif;
+    color: #243447;
+    background: linear-gradient(135deg, #fff4e8, #eef6ff);
+}
+ 
+.container {
+    width: 100%;
+    max-width: 780px;
+    margin: auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 14px 35px rgba(69, 61, 45, 0.16);
+}
+ 
+.etiqueta {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #9a4d08;
+    background-color: #fff0dc;
+    border-radius: 999px;
+    font-weight: bold;
+}
+ 
+h1 {
+    margin: 14px 0 8px;
+    color: #6d3708;
+    text-align: center;
+}
+ 
+.introducao {
+    margin: 0;
+    color: #5d6878;
+    text-align: center;
+}
+ 
+.conceitos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 28px 0;
+}
+ 
+.conceitos article {
+    padding: 18px;
+    border: 1px solid #f2d3b1;
+    border-radius: 12px;
+    background-color: #fff9f2;
+}
+ 
+.conceitos span {
+    color: #9a4d08;
+    font-weight: bold;
+}
+ 
+.conceitos p {
+    margin: 8px 0 0;
+    line-height: 1.45;
+}
+ 
+label {
+    display: block;
+    font-weight: bold;
+}
+ 
+input {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid #aeb8c2;
+    border-radius: 8px;
+    font-size: 16px;
+}
+ 
+input:focus {
+    border-color: #9a4d08;
+    outline: 3px solid rgba(154, 77, 8, 0.15);
+}
+ 
+.visualizacao {
+    margin-top: 18px;
+    padding: 16px;
+    border-left: 5px solid #3975b7;
+    border-radius: 8px;
+    background-color: #f2f7fd;
+}
+ 
+.visualizacao span {
+    color: #3975b7;
+    font-weight: bold;
+}
+ 
+.visualizacao p {
+    margin: 8px 0 0;
+}
+ 
+.area-interacao {
+    margin-top: 18px;
+    padding: 28px;
+    border: 2px dashed #9a4d08;
+    border-radius: 12px;
+    background-color: #fff9f2;
+    text-align: center;
+    transition: 0.2s;
+}
+ 
+.botoes {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+ 
+button {
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #9a4d08;
+    font-size: 16px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #783a04;
+}
+ 
+button.secundario {
+    background-color: #607d8b;
+}
+ 
+button.secundario:hover {
+    background-color: #455a64;
+}
+ 
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+ 
+.resumo article {
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #f5f3ff;
+    text-align: center;
+}
+ 
+.resumo span {
+    display: block;
+    min-height: 34px;
+    margin-bottom: 8px;
+    color: #655b80;
+    font-size: 14px;
+}
+ 
+.resumo strong {
+    color: #47388f;
+    font-size: 22px;
+}
+ 
+@media (max-width: 680px) {
+    body {
+        padding: 20px 12px;
+    }
+ 
+    .container {
+        padding: 22px;
+    }
+ 
+    .conceitos,
+    .botoes,
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+}

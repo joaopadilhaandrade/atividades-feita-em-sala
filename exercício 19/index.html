@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19 — Manipulando Classes com classList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <span class="etiqueta">Exercício 19</span>
+        <h1>Laboratório de Classes CSS</h1>
+        <p class="introducao">
+            Altere a aparência de um cartão adicionando e removendo classes.
+        </p>
+ 
+        <section class="conceitos">
+            <article>
+                <span>add()</span>
+                <p>Adiciona uma classe ao elemento.</p>
+            </article>
+ 
+            <article>
+                <span>remove()</span>
+                <p>Remove uma classe existente.</p>
+            </article>
+ 
+            <article>
+                <span>toggle()</span>
+                <p>Adiciona ou remove a classe automaticamente.</p>
+            </article>
+ 
+            <article>
+                <span>contains()</span>
+                <p>Verifica se a classe está ativa.</p>
+            </article>
+        </section>
+ 
+        <section id="cartaoPerfil" class="cartao-perfil">
+            <div class="avatar">JS</div>
+ 
+            <div class="conteudo-cartao">
+                <span class="categoria">Perfil do estudante</span>
+                <h2>Ana — Front-End</h2>
+                <p id="detalhes" class="detalhes">
+                    Estudando HTML, CSS, JavaScript e GitHub.
+                </p>
+            </div>
+        </section>
+ 
+        <div class="botoes">
+            <button id="btnTema">Alternar tema</button>
+            <button id="btnDestaque">Alternar destaque</button>
+            <button id="btnDetalhes">Ocultar detalhes</button>
+            <button id="btnRestaurar" class="secundario">Restaurar</button>
+        </div>
+ 
+        <section class="status" aria-live="polite">
+            <h2>Classes ativas</h2>
+            <p id="classesAtivas">Nenhuma classe adicional.</p>
+        </section>
+    </main>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

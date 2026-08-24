@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px 16px;
+    margin: 0;
+}
+
+.container{
+    background-color: white;
+    max-width: 430px;
+    margin: auto;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+h1{
+    color: #333;
+    margin-top: 0;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input{
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.butao{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button{
+    flex: 1;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+button.secun{
+    background-color: #6c757d;
+}
+
+button.secun:hover{
+    background-color: #545b62;
+}
+
+#resultado{
+    min-height: 24px;
+    margin-top: 22px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dica{
+    margin-bottom: 0;
+    color: #555;
+    font-weight: bold;
+}
+
+@media (max-width: 480px){
+    body{
+        padding: 20px 12px;
+    }
+    .container{
+        padding: 22px;
+    }
+    .butao{
+        flex-direction: column;
+    }
+}

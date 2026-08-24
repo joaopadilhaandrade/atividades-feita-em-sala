@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px;
+    font-family: Arial, sans-serif;
+    color: #243447;
+    background: linear-gradient(135deg, #ecfff5, #eef4ff);
+}
+ 
+.container {
+    width: 100%;
+    max-width: 820px;
+    margin: auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 14px 35px rgba(35, 73, 62, 0.16);
+}
+ 
+.etiqueta {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #08764c;
+    background-color: #dff8ed;
+    border-radius: 999px;
+    font-weight: bold;
+}
+ 
+h1 {
+    margin: 14px 0 8px;
+    color: #17543d;
+    text-align: center;
+}
+ 
+.introducao {
+    margin: 0;
+    color: #5d6878;
+    text-align: center;
+}
+ 
+.conceitos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 28px 0;
+}
+ 
+.conceitos article {
+    padding: 18px;
+    border: 1px solid #cce9dc;
+    border-radius: 12px;
+    background-color: #f3fcf8;
+}
+ 
+.conceitos span {
+    color: #08764c;
+    font-weight: bold;
+}
+ 
+.conceitos p {
+    margin: 8px 0 0;
+    line-height: 1.45;
+}
+ 
+label {
+    display: block;
+    font-weight: bold;
+}
+ 
+.entrada {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    margin-top: 8px;
+}
+ 
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aeb8c2;
+    border-radius: 8px;
+    font-size: 16px;
+}
+ 
+input:focus {
+    border-color: #08764c;
+    outline: 3px solid rgba(8, 118, 76, 0.15);
+}
+ 
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #08764c;
+    font-size: 15px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #065a3b;
+}
+ 
+button.secundario {
+    background-color: #607d8b;
+}
+ 
+button.secundario:hover {
+    background-color: #455a64;
+}
+ 
+.mensagem {
+    min-height: 24px;
+    margin: 18px 0 0;
+    color: #5d6878;
+    font-weight: bold;
+}
+ 
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+ 
+.resumo article {
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #edf8f3;
+    text-align: center;
+}
+ 
+.resumo span {
+    display: block;
+    margin-bottom: 8px;
+    color: #526b61;
+    font-size: 14px;
+}
+ 
+.resumo strong {
+    color: #17543d;
+    font-size: 24px;
+}
+ 
+.lista-container {
+    margin-top: 24px;
+    padding: 20px;
+    border-left: 5px solid #08764c;
+    border-radius: 10px;
+    background-color: #f3fcf8;
+}
+ 
+.lista-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+ 
+.lista-cabecalho h2 {
+    margin: 0;
+    color: #17543d;
+}
+ 
+ul {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+ 
+.tarefa {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 14px;
+    border: 1px solid #d5e7df;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.2s;
+}
+ 
+.tarefa span {
+    line-height: 1.45;
+}
+ 
+.tarefa.concluida {
+    border-color: #8bc9ac;
+    background-color: #e2f7ed;
+}
+ 
+.tarefa.concluida span {
+    color: #567066;
+    text-decoration: line-through;
+}
+ 
+.botao-concluir {
+    background-color: #3975b7;
+}
+ 
+.botao-concluir:hover {
+    background-color: #2c5d91;
+}
+ 
+.tarefa.concluida .botao-concluir {
+    background-color: #6b7280;
+}
+ 
+.vazio {
+    padding: 16px;
+    color: #6b7280;
+    border-radius: 8px;
+    background-color: white;
+    font-style: italic;
+}
+ 
+@media (max-width: 680px) {
+    body {
+        padding: 20px 12px;
+    }
+ 
+    .container {
+        padding: 22px;
+    }
+ 
+    .conceitos,
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+ 
+    .entrada,
+    .tarefa {
+        grid-template-columns: 1fr;
+    }
+ 
+    .lista-cabecalho {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,182 @@
+
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 16px;
+    font-family: Arial, sans-serif;
+    color: #243447;
+    background: linear-gradient(135deg, #edf8ff, #f4f1ff);
+}
+ 
+.container {
+    width: 100%;
+    max-width: 780px;
+    margin: auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 14px 35px rgba(40, 58, 100, 0.16);
+}
+ 
+.etiqueta {
+    display: inline-block;
+    padding: 6px 12px;
+    color: #175f8f;
+    background-color: #e2f3ff;
+    border-radius: 999px;
+    font-weight: bold;
+}
+ 
+h1 {
+    margin: 14px 0 8px;
+    color: #183f6c;
+    text-align: center;
+}
+ 
+.introducao {
+    margin: 0;
+    color: #5d6878;
+    text-align: center;
+}
+ 
+.conceitos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 28px 0 16px;
+}
+ 
+.conceitos article {
+    padding: 18px;
+    border: 1px solid #cfe5f4;
+    border-radius: 12px;
+    background-color: #f3faff;
+}
+ 
+.conceitos span {
+    color: #175f8f;
+    font-weight: bold;
+}
+ 
+.conceitos p {
+    margin: 8px 0 0;
+    line-height: 1.45;
+}
+ 
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+ 
+.resumo article {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #f2efff;
+    text-align: center;
+}
+ 
+.resumo span {
+    display: block;
+    margin-bottom: 8px;
+    color: #655b80;
+    font-size: 14px;
+}
+ 
+.resumo strong {
+    color: #47388f;
+    font-size: 26px;
+}
+ 
+.botoes {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+ 
+button {
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #175f8f;
+    font-size: 16px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #104a70;
+}
+ 
+button.secundario {
+    background-color: #607d8b;
+}
+ 
+button.secundario:hover {
+    background-color: #455a64;
+}
+ 
+.mensagem {
+    min-height: 24px;
+    margin: 20px 0 0;
+    color: #5d6878;
+    font-weight: bold;
+}
+ 
+.trilha-container {
+    margin-top: 22px;
+    padding: 20px;
+    border-left: 5px solid #175f8f;
+    border-radius: 10px;
+    background-color: #f3faff;
+}
+ 
+.trilha-container h2 {
+    margin-top: 0;
+    color: #183f6c;
+}
+ 
+ol {
+    margin: 0;
+    padding-left: 30px;
+}
+ 
+li {
+    margin: 10px 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(39, 74, 110, 0.08);
+}
+ 
+li::marker {
+    color: #175f8f;
+    font-weight: bold;
+}
+ 
+li.vazio {
+    color: #6b7280;
+    font-style: italic;
+    list-style: none;
+}
+ 
+@media (max-width: 680px) {
+    body {
+        padding: 20px 12px;
+    }
+ 
+    .container {
+        padding: 22px;
+    }
+ 
+    .conceitos,
+    .resumo,
+    .botoes {
+        grid-template-columns: 1fr;
+    }
+}
