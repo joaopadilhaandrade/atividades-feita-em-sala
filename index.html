@@ -50,18 +50,20 @@
   <div class="grid-container" id="grid"></div>
 
   <script>
-    const container = document.getElementById('grid');
+   <script>
+  const container = document.getElementById('grid');
 
-    for (let i = 1; i <= 20; i++) {
-      const numero = String(i).padStart(2, '0');
-      const botao = document.createElement('a');
-      
-      // Define o caminho para cada página do exercício
-      botao.href = `exercicio-${numero}.html`;
-      botao.className = 'btn-exercicio';
-      botao.textContent = `Exercício ${numero}`;
-      
-      container.appendChild(botao);
+  for (let i = 1; i <= 20; i++) {
+    const numero = String(i).padStart(2, '0');
+    const botao = document.createElement('a');
+    
+    botao.href = `exercicio-${numero}/index.html`; 
+    botao.className = 'btn-exercicio';
+    botao.textContent = `Exercício ${numero}`;
+    
+    container.appendChild(botao);
+  }
+</script>
     }
   </script>
 
