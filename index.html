@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Exercícios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      margin: 0;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      width: 100%;
+      max-width: 800px;
+    }
+    .btn-exercicio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .btn-exercicio:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meus Exercícios</h1>
+  <div class="grid-container" id="grid"></div>
+
+  <script>
+    const container = document.getElementById('grid');
+
+    for (let i = 1; i <= 20; i++) {
+      const numero = String(i).padStart(2, '0');
+      const botao = document.createElement('a');
+      
+      // Define o caminho para cada página do exercício
+      botao.href = `exercicio-${numero}.html`;
+      botao.className = 'btn-exercicio';
+      botao.textContent = `Exercício ${numero}`;
+      
+      container.appendChild(botao);
+    }
+  </script>
+
+</body>
+</html>
