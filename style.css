@@ -1,88 +1,64 @@
-/* style.css */
-:root {
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --accent: #38bdf8;
-  --accent-hover: #818cf8;
-}
+  /* Estilização Geral e Fundo */
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
 
-* {
-  box-sizing: border-box;
-}
+  /* Título Principal */
+  h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
 
-body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background: var(--bg-gradient);
-  color: var(--text-main);
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 1rem;
-}
+  /* Subtítulo */
+  p {
+    color: #576574;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
 
-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
+  /* Grade que organiza os links */
+  .painel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 950px;
+    padding: 10px;
+  }
 
-h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  /* Estilo dos Blocos de Exercício (Com Cores e Degradê) */
+  .card-exercicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.25);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
 
-p {
-  color: var(--text-muted);
-  margin: 0;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1.25rem;
-  width: 100%;
-  max-width: 900px;
-}
-
-.btn-exercicio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem 1rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  backdrop-filter: blur(10px);
-  color: var(--text-main);
-  text-decoration: none;
-  border-radius: 12px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-}
-
-.btn-exercicio .tag {
-  font-size: 0.7rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.25rem;
-}
-
-.btn-exercicio:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.btn-exercicio:active {
-  transform: translateY(-1px);
-}
+  /* Efeito Visual Interativo (Hover) */
+  .card-exercicio:hover {
+    transform: translateY(-5px) scale(1.03);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
