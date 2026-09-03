@@ -3,67 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel de Exercícios</title>
+  <title>Painel de Exercícios Automático</title>
   <style>
+    /* Estilização básica da página */
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
-      margin: 0;
     }
+
     h1 {
-      color: #333;
+      color: #212529;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #6c757d;
       margin-bottom: 30px;
     }
-    .grid-container {
+
+    /* Grade que organiza os links sozinhos */
+    .painel-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 16px;
       width: 100%;
-      max-width: 800px;
+      max-width: 900px;
     }
-    .btn-exercicio {
+
+    /* Estilo dos blocos/botões de exercício */
+    .card-exercicio {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 15px;
-      background-color: #007bff;
-      color: white;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #0d6efd;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s, background-color 0.2s;
+      font-weight: 600;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease-in-out;
     }
-    .btn-exercicio:hover {
-      background-color: #0056b3;
-      transform: translateY(-2px);
+
+    /* Efeito de passar o mouse */
+    .card-exercicio:hover {
+      background-color: #0d6efd;
+      color: #ffffff;
+      border-color: #0d6efd;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
     }
   </style>
 </head>
 <body>
 
-  <h1>Meus Exercícios</h1>
-  <div class="grid-container" id="grid"></div>
+  <h1>Painel de Exercícios</h1>
+  <p>Acesse rapidamente as atividades abaixo</p>
+
+  <!-- O JavaScript vai injetar os 20 links automaticamente aqui dentro -->
+  <div class="painel-grid" id="container-links"></div>
 
   <script>
-   <script>
-  const container = document.getElementById('grid');
+    const grid = document.getElementById('container-links');
+    const totalExercicios = 20;
 
-  for (let i = 1; i <= 20; i++) {
-    const numero = String(i).padStart(2, '0');
-    const botao = document.createElement('a');
-    
-    botao.href = `exercicio-${numero}/index.html`; 
-    botao.className = 'btn-exercicio';
-    botao.textContent = `Exercício ${numero}`;
-    
-    container.appendChild(botao);
-  }
-</script>
+    // Loop automático para gerar os 20 elementos
+    for (let i = 1; i <= totalExercicios; i++) {
+      // Formata o número com duas casas (ex: 01, 02... 20)
+      const numeroFormatado = String(i).padStart(2, '0');
+      
+      // Cria a tag de link <a>
+      const link = document.createElement('a');
+      
+      // Define a classe CSS e o texto do botão
+      link.className = 'card-exercicio';
+      link.textContent = `Exercício ${numeroFormatado}`;
+      
+      // Define para onde o link vai (Ex: exercicio-01/index.html)
+      link.href = `exercicio-${numeroFormatado}/index.html`;
+      
+      // Adiciona o link criado dentro da div grid
+      grid.appendChild(link);
     }
   </script>
 
